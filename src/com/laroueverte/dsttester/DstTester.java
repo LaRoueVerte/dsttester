@@ -36,6 +36,41 @@ public class DstTester {
 
 			date.addMinutes(1);
 			assertDate("1 minute later", date, 3, 1);
+
+			System.out.println();
+			System.out.println("==================================================================");
+			System.out.println("Because we are nice, here are some commands for testing linux's date ");
+			System.out.println("secs=$(date -d '" + args[1] + " 01:59:00' +%s)");
+
+			System.out.println("#Adding 1 minute");
+			System.out.println("secs=$((secs + 1*60))");
+			System.out.println("date '+%d.%b.%Y %T' --date=\"@$secs\"");
+			System.out.println("#Above, it should be 02:00");
+			System.out.println("");
+
+			System.out.println("#Adding 59 minutes");
+			System.out.println("secs=$((secs + 59*60))");
+			System.out.println("date '+%d.%b.%Y %T' --date=\"@$secs\"");
+			System.out.println("#Above, it should be 02:59");
+			System.out.println("");
+
+			System.out.println("#Adding 1 minutes");
+			System.out.println("secs=$((secs + 1*60))");
+			System.out.println("date '+%d.%b.%Y %T' --date=\"@$secs\"");
+			System.out.println("Above, it should be 02:00");
+			System.out.println("");
+
+			System.out.println("Adding 59 minutes");
+			System.out.println("secs=$((secs + 59*60))");
+			System.out.println("date '+%d.%b.%Y %T' --date=\"@$secs\"");
+			System.out.println("#Above, it should be 02:59");
+			System.out.println("");
+
+			System.out.println("#Adding 1 minutes");
+			System.out.println("secs=$((secs + 1*60))");
+			System.out.println("date '+%d.%b.%Y %T' --date=\"@$secs\"");
+			System.out.println("#Above, it should be 03:00");
+			System.out.println("");
 		}
 
 		if (args[0].equals("SPRING")) {
