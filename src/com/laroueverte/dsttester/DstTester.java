@@ -57,7 +57,7 @@ public class DstTester {
 			System.out.println("#Adding 1 minutes");
 			System.out.println("secs=$((secs + 1*60))");
 			System.out.println("date '+%d.%b.%Y %T' --date=\"@$secs\"");
-			System.out.println("Above, it should be 02:00");
+			System.out.println("#Above, it should be 02:00");
 			System.out.println("");
 
 			System.out.println("Adding 59 minutes");
